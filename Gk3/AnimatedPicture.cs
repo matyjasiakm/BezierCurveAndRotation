@@ -151,7 +151,7 @@ namespace Gk3
                 double rotationAngle = deegre % (Math.PI / 2);
                 double l = Math.Tan(rotationAngle / 2);
                 double k = Math.Sin(rotationAngle);
-                RGB[][] newPixelsColors = Xshear(l, newPixelsColors);
+                newPixelsColors = Xshear(l, newPixelsColors);
                 newPixelsColors = Yshear(k, newPixelsColors);
                 newPixelsColors = Xshear(l, newPixelsColors);
                 Vector vertex = new Vector(new Vertex(newPixelsColors[0].GetLength(0) / 2, newPixelsColors.GetLength(0) / 2), actualPositionOfImageMiddlePoint);
